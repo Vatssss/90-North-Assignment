@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="logo.jpeg" alt="Logo" class="logo">
+        <p>Fixed Navbar</p>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Left Menu -->
+        <div class="left-menu" id="leftMenu">
+            <button class="menu-button" onclick="toggleMenu()">Toggle Menu</button>
+            <ul>
+                <li>Menu Item 1</li>
+                <li>Menu Item 2</li>
+                <li>Menu Item 3</li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <h1>This is the main content area created by <i>Vatsal Saxena</i> for <u>90 North</u> Task 1 FrontEnd
+                Development.</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis quia unde sit officiis? Incidunt at
+                laboriosam vitae porro ullam repellat optio eum aut. Omnis quis deleniti consectetur dolores sit
+                similique.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, consectetur error! Velit adipisci
+                dolorum soluta ut accusantium laborum laboriosam dolore. Quas nisi eum tempore ex quasi delectus
+                distinctio obcaecati pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iusto illo
+                eaque veritatis natus, tempora magnam ducimus, amet vitae rerum est nostrum? Doloribus quae expedita
+                esse quaerat culpa sit perferendis?
+                Numquam, harum cumque. Fugiat quidem voluptatem doloribus minus quaerat ad accusamus quod fugit! Culpa,
+                distinctio similique assumenda dicta dignissimos architecto eveniet labore minima error voluptatum
+                provident at adipisci alias facere?
+                Quo aliquam reprehenderit officia unde expedita doloremque voluptate fugiat accusamus? Et reiciendis
+                eveniet accusamus, ipsam animi minima odit praesentium officiis labore est, error repellat doloribus
+                voluptatem quia, sint inventore quo.
+                Voluptatibus neque facilis est sapiente minus doloribus quos. Molestiae officia delectus, ea incidunt
+                omnis at velit earum eos sequi fuga iure ratione tempora sint dolorum molestias itaque. Soluta, vero
+                ullam.
+                Optio minus facere at? Modi porro voluptatibus nam, dolorum atque saepe qui error reiciendis, nostrum
+                corporis animi explicabo similique dolorem quia neque quibusdam, maiores quos cupiditate dicta minus!
+                Voluptatibus, quibusdam?
+                Obcaecati eos amet incidunt? A obcaecati amet facere in repellat iste modi aspernatur esse, voluptatibus
+                aliquid explicabo impedit temporibus molestiae minima perferendis nemo! Officiis aspernatur ipsam
+                officia vero excepturi in!
+                Aut quaerat iste non velit sequi eveniet magnam quo tenetur blanditiis officiis, doloremque quasi
+                placeat nisi odit possimus dolores adipisci dolore aspernatur modi ipsam iusto animi id beatae.
+                Incidunt, quo.
+                Praesentium porro blanditiis, facere sapiente reiciendis iste suscipit et minus quasi facilis veritatis
+                necessitatibus quos quia sed dolores officia odit tempora quo beatae veniam autem in fuga. Laudantium,
+                numquam culpa?
+                Id eius suscipit nemo esse, impedit a blanditiis! Voluptas enim explicabo eligendi, quam fugit ipsum
+                pariatur sapiente numquam dolores impedit vitae quis amet sunt nisi earum soluta repellendus rem sed.
+                Sapiente reprehenderit ducimus, rem laboriosam voluptates, veritatis minus cum velit quae, recusandae
+                accusantium animi ipsam soluta? Porro quaerat nam reiciendis ipsa reprehenderit neque. Temporibus
+                perferendis voluptatibus nobis nesciunt vero porro!</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur molestias fugiat minus corrupti,
+                delectus maiores deleniti quod veniam quo dolorem debitis reprehenderit illo sapiente, saepe beatae
+                repellendus ullam necessitatibus. Eos!</p>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <h2>Right Panel</h2>
+            <p>Additional information can go here.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Footer Content</p>
+        <p>Privacy Policy: We value your privacy. Any data collected is used to improve your experience and will never
+            be shared without consent. For more details, contact us.</p>
+    </footer>
+
+    <script>
+        // Function 1: Adjust page size based on screen width
+        function adjustPageSize() {
+            const screenWidth = window.innerWidth;
+            const mainContent = document.querySelector('.main-content'); // Target main content area
+
+            if (screenWidth > 992 && screenWidth <= 1600) {
+                mainContent.style.transform = "scale(0.9)";
+                mainContent.style.transformOrigin = "top center";
+            } else if (screenWidth >= 700 && screenWidth <= 767) {
+                mainContent.style.transform = "scale(0.8)";
+                mainContent.style.transformOrigin = "top center";
+            } else if (screenWidth >= 600 && screenWidth < 700) {
+                mainContent.style.transform = "scale(0.75)";
+                mainContent.style.transformOrigin = "top center";
+            } else if (screenWidth <= 600) {
+                mainContent.style.transform = "scale(0.5)";
+                mainContent.style.transformOrigin = "top center";
+            } else {
+                mainContent.style.transform = "scale(1)";
+                mainContent.style.transformOrigin = "top center";
+            }
+        }
+
+        // Function 2: Toggle menu collapse
+        function toggleMenu() {
+            const menu = document.getElementById('leftMenu');
+            menu.classList.toggle('collapsed');
+        }
+
+        window.addEventListener("resize", adjustPageSize);
+        adjustPageSize();
+
+    </script>
+</body>
+
+</html>
